@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_banner__minors
+    meta:
+      grain: "minor_code"
+    config:
+      tags: ["registrar","banner_bug"]
+    description: "Banner minor type"
+    columns:
+      - name: minor_code
+        description: "Minor code"
+        tests:
+          - not_null
+          - unique
+
+      - name: minor_desc
+        description: "Minor description"
+        tests:
+          - not_null
+
+      - name: dept_code
+        description: "Department code"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
