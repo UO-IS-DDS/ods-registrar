@@ -1,19 +1,10 @@
-with student as (
+with 
 
-  select * from {{ ref('odsmgr_student') }}
+student          as (select * from {{ ref('odsmgr_student') }}),
 
-),
+person_detail    as (select * from {{ ref('odsmgr_person_detail') }}),
 
-person_detail as (
-
-   select * from {{ ref('odsmgr_person_detail') }}
-
-),
-person_addres_uo as (
-
-   select * from {{ ref('odsmgr_person_address_uo') }}
-
-),
+person_addres_uo as (select * from {{ ref('odsmgr_person_address_uo') }}),
 
 con as (
 

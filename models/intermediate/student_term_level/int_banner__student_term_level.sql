@@ -1,20 +1,10 @@
-with banner_student_term_level as (
+with
 
-   select * from {{ ref('stg_banner__saturn__sgbstdn') }}
+banner_student_term_level as (select * from {{ ref('stg_banner__saturn__sgbstdn') }}),
 
-),
+banner_majors as (select * from {{ ref('int_banner__majors') }}),
 
-banner_majors as (
-
-   select * from {{ ref('int_banner__majors') }}
-
-),
-
-banner_minors as (
-
-   select * from {{ ref('int_banner__minors') }}
-
-),
+banner_minors as (select * from {{ ref('int_banner__minors') }}),
 
 banner_student_term_level_with_desc as (
 
