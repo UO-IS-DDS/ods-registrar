@@ -38,7 +38,7 @@ models:
       - name: admit_term
         description: "Admit term"
 
-      - name: honors_college_ind
+      - name: is_honors_college
         description: "Honors College indicator"
 
       - name: major_1_code

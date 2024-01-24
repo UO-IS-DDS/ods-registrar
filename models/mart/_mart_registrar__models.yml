@@ -30,7 +30,7 @@ models:
       - name: admit_term
         description: "Admit term"
 
-      - name: honors_college_ind
+      - name: is_honors_college
         description: "Honors College indicator"
         tests:
           - not_null
@@ -114,6 +114,97 @@ models:
 
       - name: minor_4_desc
         description: "Minor 4 description"
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
+
+  - name: odsmgr_student
+    meta:
+      grain: "person_uid, academic_period, student_level"
+    access: protected
+    config:
+      tags: ["registrar", "mart"]
+    description: "Banner general student record for term and level"
+    columns:
+      - name: person_uid
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_persons')
+              field: internal_banner_id
+
+      - name: academic_period
+        description: "Term code"
+        tests:
+          - not_null
+
+      - name: student_level
+        description: "Level code"
+        tests:
+          - not_null
+
+      - name: honors_college_flag
+        description: "Honors College indicator"
+        tests:
+          - not_null
+
+      - name: packed_majors1
+        description: "Major 1 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__majors')
+              field: major_code
+
+      - name: packed_majors2
+        description: "Major 2 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__majors')
+              field: major_code
+
+      - name: packed_majors3
+        description: "Major 3 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__majors')
+              field: major_code
+
+      - name: packed_majors4
+        description: "Major 4 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__majors')
+              field: major_code
+
+      - name: packed_minors1
+        description: "Minor 1 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__minors')
+              field: minor_code
+
+      - name: packed_minors2
+        description: "Minor 2 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__minors')
+              field: minor_code
+
+      - name: packed_minors3
+        description: "Minor 3 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__minors')
+              field: minor_code
+
+      - name: packed_minors4
+        description: "Minor 4 code"
+        tests:
+          - relationships:
+              to: ref('int_banner__minors')
+              field: minor_code
 
       - name: ods_surrogate_key
         tests:

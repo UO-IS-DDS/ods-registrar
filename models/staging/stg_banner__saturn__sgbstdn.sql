@@ -17,7 +17,7 @@ renamed as (
                            sgbstdn_majr_code_minr_1) 
                then 'Y' 
             else 'N'
-        end                                                                             as honors_college_ind,
+        end                                                                             as is_honors_college,
         (select column_name 
          from (select column_name, row_number() over (order by column_name) rn
                from (select sgbstdn_majr_code_1   as column_name union
