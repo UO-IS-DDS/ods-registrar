@@ -6,6 +6,7 @@ models:
       grain: "banner_id, term_code, level_code"
     config:
       tags: ["registrar","contract"]
+      group: registrar
     description: "Student Data Report"
     columns:
       - name: banner_id

@@ -7,3 +7,4 @@ models:
       show: false
     config:
       tags: ["cleaning"]
+      group: registrar

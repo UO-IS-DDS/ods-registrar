@@ -1,0 +1,5 @@
+groups:
+  - name: registrar
+    owner:
+      name: Registrar ODS models
+      email: lampman@uoregon.edu

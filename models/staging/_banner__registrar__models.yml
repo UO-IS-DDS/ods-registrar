@@ -4,6 +4,7 @@ models:
   - name: stg_banner__saturn__stvmajr
     config:
       tags: ["registrar"]
+      group: registrar
     description: "Banner major type"
     columns:
       - name: major_code
@@ -24,6 +25,7 @@ models:
   - name: stg_banner__saturn__sgbstdn
     config:
       tags: ["registrar"]
+      group: registrar
     description: "Banner general student record"
     columns:
       - name: internal_banner_id
