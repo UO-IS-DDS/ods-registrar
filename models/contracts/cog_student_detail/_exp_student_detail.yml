@@ -12,8 +12,8 @@ exposures:
     tags: ["registrar"]
 
     depends_on:
-      - ref('mart_student_term_level')
-      - ref('mart_persons')
+      - ref('fct_student_term_level')
+      - ref('dim_persons')
       - ref('con__registrar__student_data_report')
 
     owner:

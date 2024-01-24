@@ -1,12 +1,12 @@
 with student_term_level as (
 
-  select * from {{ ref('mart_student_term_level') }}
+  select * from {{ ref('fct_student_term_level') }}
 
 ),
 
 persons as (
 
-   select * from {{ ref('mart_persons') }}
+   select * from {{ ref('dim_persons') }}
 
 ),
 

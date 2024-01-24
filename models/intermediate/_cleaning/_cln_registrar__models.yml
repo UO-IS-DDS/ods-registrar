@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-  - name: cln_mart_persons
+  - name: cln_dim_persons
     docs:
       show: false
     config:

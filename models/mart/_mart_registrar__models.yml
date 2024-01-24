@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: mart_student_term_level
+  - name: fct_student_term_level
     meta:
       grain: "internal_banner_id, term_code, level_code"
     access: protected
@@ -14,7 +14,7 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('mart_persons')
+              to: ref('dim_persons')
               field: internal_banner_id
 
       - name: term_code

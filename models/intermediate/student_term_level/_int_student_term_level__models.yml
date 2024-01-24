@@ -13,7 +13,7 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('mart_persons')
+              to: ref('dim_persons')
               field: internal_banner_id
 
       - name: term_code

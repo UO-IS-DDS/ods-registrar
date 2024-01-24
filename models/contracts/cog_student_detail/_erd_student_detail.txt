@@ -1,4 +1,4 @@
-Table mart_persons [headercolor: #1E69FD] {
+Table dim_persons [headercolor: #1E69FD] {
   internal_banner_id   integer [PK]
   banner_id            varchar
   legal_first_name     varchar
@@ -39,7 +39,7 @@ Table mart_persons [headercolor: #1E69FD] {
 
 }
 
-Table mart_student_term_level {
+Table _student_term_level {
   internal_banner_id integer [ref: < mart_persons.internal_banner_id, PK]
   term_code    varchar
   level_code   varchar
