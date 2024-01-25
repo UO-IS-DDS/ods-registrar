@@ -12,7 +12,11 @@ final as (
     t1.internal_banner_id as person_uid,
     t1.term_code          as academic_period,
     t1.level_code         as student_level,
-    t1.is_honors_college  as honors_college_flag,
+    case
+         when t1.is_honors_college = 'N'
+           then null
+         else 'Y'
+    end                   as honors_college_flag,
     t1.major_1_code       as packed_majors1,
     t1.major_2_code       as packed_majors2,
     t1.major_3_code       as packed_majors3,
@@ -23,14 +27,14 @@ final as (
     t1.minor_4_code       as packed_minors4,
 
     -- dim_person
-    t2.banner_id                             as "ID", 
+    t2.banner_id                             as "id", 
     replace(
             t2.last_name            || ', ' ||
             t2.preferred_first_name || ' '  ||
             t2.middle_initial       || '.',
             ' .',
             ''
-           )                                 as "NAME"
+           )                                 as "name"
  
   from fct_student_term_level t1
   left join dim_person t2
