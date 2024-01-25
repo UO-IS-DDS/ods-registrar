@@ -28,7 +28,6 @@ final as (
             t2.last_name            || ', ' ||
             t2.preferred_first_name || ' '  ||
             t2.middle_initial       || '.',
-
             ' .',
             ''
            )                                 as "NAME"
