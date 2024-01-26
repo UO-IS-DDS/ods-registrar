@@ -1,28 +1,72 @@
 version: 2
 
 models:
+
   - name: con__registrar__student_data_report
     meta:
-      grain: "banner_id, term_code, level_code"
+      grain: "person_uid, academic_period, student_level"
     config:
       tags: ["registrar","contract"]
       group: registrar
     description: "Student Data Report"
     columns:
-    
-      - name: banner_id
-        description: "External Banner ID"
 
-      - name: term_code
+      - name: person_uid
+        description: "Internal Banner ID"
+        tests:
+          - not_null
+
+      - name: academic_period
         description: "Term code"
+        tests:
+          - not_null
 
-      - name: level_code
+      - name: student_level
         description: "Level code"
+        tests:
+          - not_null
 
-      - name: first_name
-        description: "First name"
+      - name: honors_college_flag
+        description: "Honors College indicator"
 
-      - name: last_name
-        description: "Person last name"
+      - name: packed_majors1
+        description: "Major 1 code"
+
+      - name: packed_majors2
+        description: "Major 2 code"
+
+      - name: packed_majors3
+        description: "Major 3 code"
+
+      - name: packed_majors4
+        description: "Major 4 code"
+
+      - name: packed_minors1
+        description: "Minor 1 code"
+
+      - name: packed_minors2
+        description: "Minor 2 code"
+
+      - name: packed_minors3
+        description: "Minor 3 code"
+
+      - name: packed_minors4
+        description: "Minor 4 code"
+
+      - name: mapr_street_line1
+        description: "Mailing (or Permanent) address line 1"
+
+      - name: mapr_street_line2
+        description: "Mailing (or Permanent) address line 2"
+
+      - name: mapr_street_line3
+        description: "Mailing (or Permanent) address line 3"
+
+      - name: confidentiality_ind
+        description: "Confidential Indicator"
+        tests:
+          - not_null
 
       - name: ods_surrogate_key
+        tests:
+          - unique
