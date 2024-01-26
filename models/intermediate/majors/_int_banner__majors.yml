@@ -1,6 +1,7 @@
 version: 2
 
 models:
+
   - name: int_banner__stvmajr__filtered_to__majors
     meta:
       grain: "major_code"
@@ -9,6 +10,7 @@ models:
       group: registrar
     description: "Banner major type"
     columns:
+
       - name: major_code
         description: "Major code"
         tests:

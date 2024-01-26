@@ -3,12 +3,62 @@ version: 2
 models:
 
   - name: dim_majors
+    meta:
+      grain: "major_code"
     config:
+      tags: ["registrar", "mart"]
       group: registrar
+    description: "Majors"
+    columns:
+
+      - name: major_code
+        description: "Major code"
+        tests:
+          - not_null
+          - unique
+
+      - name: major_desc
+        description: "Major description"
+        tests:
+          - not_null
+
+      - name: dept_code
+        description: "Department code"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
 
   - name: dim_minors
+    meta:
+      grain: "minor_code"
     config:
+      tags: ["registrar", "mart"]
       group: registrar
+    description: "Majors"
+    columns:
+
+      - name: minor_code
+        description: "Minor code"
+        tests:
+          - not_null
+          - unique
+
+      - name: minor_desc
+        description: "Minor description"
+        tests:
+          - not_null
+
+      - name: dept_code
+        description: "Department code"
+        tests:
+          - not_null
+
+      - name: ods_surrogate_key
+        tests:
+          - unique
 
   - name: fct_student_term_level
     meta:
@@ -16,7 +66,7 @@ models:
     config:
       tags: ["registrar", "mart"]
       group: registrar
-    description: "Banner general student record for term and level"
+    description: "General student record for term and level"
     columns:
 
       - name: internal_banner_id

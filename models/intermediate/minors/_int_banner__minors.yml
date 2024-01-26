@@ -1,6 +1,7 @@
 version: 2
 
 models:
+
   - name: int_banner__stvmajr__filtered_to__minors
     meta:
       grain: "minor_code"
@@ -9,6 +10,7 @@ models:
       group: registrar
     description: "Banner minor type"
     columns:
+    
       - name: minor_code
         description: "Minor code"
         tests:

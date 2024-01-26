@@ -9,6 +9,7 @@ models:
       group: registrar
     description: "Student Data Report"
     columns:
+    
       - name: banner_id
         description: "External Banner ID"
 
