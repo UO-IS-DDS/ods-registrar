@@ -1,0 +1,1 @@
+select * from {{ ref('int_banner__stvmajr__filtered_to__minors') }}

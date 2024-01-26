@@ -1,6 +1,15 @@
 version: 2
 
 models:
+
+  - name: dim_majors
+    config:
+      group: registrar
+
+  - name: dim_minors
+    config:
+      group: registrar
+
   - name: fct_student_term_level
     meta:
       grain: "internal_banner_id, term_code, level_code"
@@ -9,6 +18,7 @@ models:
       group: registrar
     description: "Banner general student record for term and level"
     columns:
+
       - name: internal_banner_id
         description: "Internal Banner ID"
         tests:

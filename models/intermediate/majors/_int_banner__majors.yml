@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_banner__majors
+  - name: int_banner__stvmajr__filtered_to__majors
     meta:
       grain: "major_code"
     config:

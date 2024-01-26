@@ -8,3 +8,17 @@ models:
     config:
       tags: ["cleaning"]
       group: registrar
+
+  - name: cln_dim_majors
+    docs:
+      show: false
+    config:
+      tags: ["cleaning"]
+      group: registrar
+
+  - name: cln_dim_minors
+    docs:
+      show: false
+    config:
+      tags: ["cleaning"]
+      group: registrar

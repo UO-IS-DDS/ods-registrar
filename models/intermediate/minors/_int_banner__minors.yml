@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_banner__minors
+  - name: int_banner__stvmajr__filtered_to__minors
     meta:
       grain: "minor_code"
     config:

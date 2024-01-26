@@ -5,7 +5,7 @@ models:
     meta:
       grain: "internal_banner_id, term_code, level_code"
     config:
-      tags: ["registrar"]
+      tags: ["registrar", "banner_bug"]
       group: registrar
     description: "Banner general student record for term and level"
     columns:
@@ -39,81 +39,57 @@ models:
         description: "Major 1 code"
         tests:
           - relationships:
-              to: ref('int_banner__majors')
+              to: ref('dim_majors')
               field: major_code
 
       - name: major_2_code
         description: "Major 2 code"
         tests:
           - relationships:
-              to: ref('int_banner__majors')
+              to: ref('dim_majors')
               field: major_code
 
       - name: major_3_code
         description: "Major 3 code"
         tests:
           - relationships:
-              to: ref('int_banner__majors')
+              to: ref('dim_majors')
               field: major_code
 
       - name: major_4_code
         description: "Major 4 code"
         tests:
           - relationships:
-              to: ref('int_banner__majors')
+              to: ref('dim_majors')
               field: major_code
 
       - name: minor_1_code
         description: "Minor 1 code"
         tests:
           - relationships:
-              to: ref('int_banner__minors')
+              to: ref('dim_minors')
               field: minor_code
 
       - name: minor_2_code
         description: "Minor 2 code"
         tests:
           - relationships:
-              to: ref('int_banner__minors')
+              to: ref('dim_minors')
               field: minor_code
 
       - name: minor_3_code
         description: "Minor 3 code"
         tests:
           - relationships:
-              to: ref('int_banner__minors')
+              to: ref('dim_minors')
               field: minor_code
 
       - name: minor_4_code
         description: "Minor 4 code"
         tests:
           - relationships:
-              to: ref('int_banner__minors')
+              to: ref('dim_minors')
               field: minor_code
-
-      - name: major_1_desc
-        description: "Major 1 description"
-
-      - name: major_2_desc
-        description: "Major 2 description"
-
-      - name: major_3_desc
-        description: "Major 3 description"
-
-      - name: major_4_desc
-        description: "Major 4 description"
-
-      - name: minor_1_desc
-        description: "Minor 1 description"
-
-      - name: minor_2_desc
-        description: "Minor 2 description"
-
-      - name: minor_3_desc
-        description: "Minor 3 description"
-
-      - name: minor_4_desc
-        description: "Minor 4 description"
 
       - name: ods_surrogate_key
         tests:
