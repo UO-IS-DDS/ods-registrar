@@ -91,7 +91,7 @@ models:
     meta:
       grain: "person_uid, academic_period, student_level"
     config:
-      tags: ["registrar", "mart"]
+      tags: ["registrar", "odsmgr"]
       group: registrar
     description: "Banner general student record for term and level"
     columns:
