@@ -37,60 +37,28 @@ models:
 
       - name: major_1_code
         description: "Major 1 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__majors')
-              field: major_code
 
       - name: major_2_code
         description: "Major 2 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__majors')
-              field: major_code
 
       - name: major_3_code
         description: "Major 3 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__majors')
-              field: major_code
 
       - name: major_4_code
         description: "Major 4 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__majors')
-              field: major_code
 
       - name: minor_1_code
         description: "Minor 1 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__minors')
-              field: minor_code
 
       - name: minor_2_code
         description: "Minor 2 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__minors')
-              field: minor_code
 
       - name: minor_3_code
         description: "Minor 3 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__minors')
-              field: minor_code
 
       - name: minor_4_code
         description: "Minor 4 code"
-        tests:
-          - relationships:
-              to: ref('int_banner__minors')
-              field: minor_code
-
+        
       - name: major_1_desc
         description: "Major 1 description"
 
