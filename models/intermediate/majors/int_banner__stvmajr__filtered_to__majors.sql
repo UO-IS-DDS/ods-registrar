@@ -6,7 +6,9 @@ with banner_major_types as (
 
 filter_to_majors as (
   
-  select {{ dbt_utils.star(from=ref('stg_banner__saturn__stvmajr'),
+  select 
+  
+    {{ dbt_utils.star(from=ref('stg_banner__saturn__stvmajr'),
                       relation_alias='filter_to_majors',
                       except=["is_major",
                               "is_minor"]) }}
