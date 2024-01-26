@@ -32,17 +32,6 @@ banner_student_term_level_with_desc as (
   left join banner_minors min3 on min3.minor_code = banner_student_term_level.minor_3_code
   left join banner_minors min4 on min4.minor_code = banner_student_term_level.minor_4_code
 
-),
-
--- relationships_int_banner__student_term_level_internal_banner_id__internal_banner_id__ref_mart_persons
-test_clean as (
-
-  select *
-  from banner_student_term_level_with_desc t1
-  where t1.internal_banner_id in (
-                                   select t2.internal_banner_id
-                                   from {{ ref('cln_dim_persons') }} t2
-                                 )
 )
 
 select *,
@@ -50,4 +39,4 @@ select *,
             ['internal_banner_id',
              'term_code',
              'level_code']) }}           as ods_surrogate_key 
-from test_clean
+from banner_student_term_level_with_desc

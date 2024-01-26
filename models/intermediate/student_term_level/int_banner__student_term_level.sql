@@ -25,7 +25,7 @@ test_clean as (
 
                      (
                        select major_code
-                       from {{ ref('cln_dim_majors') }}
+                       from {{ ref('cln_int_banner__stvmajr__filtered_to__majors') }}
                      )
                    )
    and not exists (
@@ -40,7 +40,7 @@ test_clean as (
 
                      (
                        select minor_code
-                       from {{ ref('cln_dim_minors') }}
+                       from {{ ref('cln_int_banner__stvmajr__filtered_to__minors') }}
                      )
                    )
 )    

@@ -9,14 +9,14 @@ models:
       tags: ["cleaning"]
       group: registrar
 
-  - name: cln_dim_majors
+  - name: cln_int_banner__stvmajr__filtered_to__majors
     docs:
       show: false
     config:
       tags: ["cleaning"]
       group: registrar
 
-  - name: cln_dim_minors
+  - name: cln_int_banner__stvmajr__filtered_to__minors
     docs:
       show: false
     config:
