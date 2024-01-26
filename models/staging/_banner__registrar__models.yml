@@ -7,6 +7,7 @@ models:
       group: registrar
     description: "Banner major type"
     columns:
+
       - name: major_code
         description: "Major code"
 
@@ -28,6 +29,7 @@ models:
       group: registrar
     description: "Banner general student record"
     columns:
+    
       - name: internal_banner_id
         description: "Internal Banner ID"
 
